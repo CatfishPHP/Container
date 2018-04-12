@@ -13,7 +13,7 @@ class Container implements ContainerInterface, \ArrayAccess
      */
     public function __construct()
     {
-        if (! array_key_exists('id', $GLOBALS)) {
+        if (! array_key_exists('di', $GLOBALS)) {
             $this->init();
         }
     }
