@@ -15,6 +15,7 @@ class ContainerTest extends TestCase
 
     public function testSetGetScalarFromContainer()
     {
+        unset($GLOBALS['di']);
         $value = 123;
 
         $container = new Container();
@@ -27,6 +28,7 @@ class ContainerTest extends TestCase
 
     public function testSetGetClosure()
     {
+        unset($GLOBALS['di']);
         $value = 123;
         $closure = function () use ($value) {
             return $value;
@@ -41,6 +43,7 @@ class ContainerTest extends TestCase
 
     public function testExceptionThrownWhenItemNotFound()
     {
+        unset($GLOBALS['di']);
         $this->expectException(NotFoundException::class);
         $container = new Container();
         $container->get('wat');
