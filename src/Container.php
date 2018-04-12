@@ -60,7 +60,7 @@ class Container implements ContainerInterface, \ArrayAccess
      * @param string $id
      * @return bool
      */
-    public function has($id)
+    public function has($id): bool
     {
         $container = $this->getContainer();
 
@@ -69,7 +69,7 @@ class Container implements ContainerInterface, \ArrayAccess
 
     /**
      * @param string $key
-     * @param $concrete
+     * @param mixed  $concrete
      */
     public function add(string $key, $concrete)
     {
@@ -113,7 +113,7 @@ class Container implements ContainerInterface, \ArrayAccess
      * @param mixed $offset
      * @return bool
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return $this->getContainer()->offsetExists($offset);
     }
@@ -131,7 +131,7 @@ class Container implements ContainerInterface, \ArrayAccess
      * @param mixed $offset
      * @param mixed $value
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         $this->getContainer()->offsetSet($offset, $value);
     }
@@ -139,7 +139,7 @@ class Container implements ContainerInterface, \ArrayAccess
     /**
      * @param mixed $offset
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         $this->getContainer()->offsetUnset($offset);
     }
