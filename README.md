@@ -1,5 +1,7 @@
 # Container (Dependency Injection)
 
+![Logo](https://avatars0.githubusercontent.com/u/38306540?s=200&v=4)
+
 This package is compliant with [PSR-1], [PSR-2] and [PSR-4]. If you notice compliance oversights,
 please send a patch via pull request.
 
