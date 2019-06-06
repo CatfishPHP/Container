@@ -45,6 +45,7 @@ class ContainerTest extends TestCase
     {
         unset($GLOBALS['di']);
         $this->expectException(NotFoundException::class);
+        $this->expectExceptionMessage('wat not handled by this container');
         $container = new Container();
         $container->get('wat');
     }
